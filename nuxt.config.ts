@@ -1,4 +1,20 @@
+import { ModuleOptions } from '@sidebase/nuxt-session';
 import removeConsole from 'vite-plugin-remove-console';
+
+const sessionConfig: ModuleOptions = {
+	api: {
+		isEnabled: false
+	},
+	isEnabled: true,
+	session: {
+		cookieHttpOnly: true,
+		cookieSecure: true,
+		storageOptions: {
+			driver: 'memory'
+		},
+		storePrefix: 's'
+	}
+}
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -33,6 +49,7 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@averjs/nuxt-compression',
+		['@sidebase/nuxt-session', sessionConfig],
 		'@vueuse/nuxt',
 		['kikiutils-nuxt', { elementPlus: true, scss: true }],
 		'nuxt-purgecss'
