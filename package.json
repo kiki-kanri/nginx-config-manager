@@ -11,6 +11,7 @@
   "devDependencies": {
     "@averjs/nuxt-compression": "^1.2.2",
     "@sidebase/nuxt-session": "^0.2.6",
+    "@types/fs-extra": "^11.0.1",
     "@types/lodash-es": "^4.17.6",
     "nuxt": "^3",
     "nuxt-purgecss": "^2.0.0",
