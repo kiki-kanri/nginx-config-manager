@@ -76,19 +76,10 @@ export default defineNuxtConfig({
 						'lodash-es': ['lodash-es']
 					}
 				}
-			},
-			ssr: false
+			}
 		},
 		plugins: [
 			removeConsole()
-		],
-		// server: {
-		// 	hmr: {
-		// 		clientPort: 443,
-		// 		path: '/hmrws',
-		// 		port: 12101,
-		// 		protocol: 'wss'
-		// 	}
-		// }
+		]
 	}
 });
