@@ -62,7 +62,11 @@ export default defineNuxtConfig({
 				/el-/,
 				/swal2/
 			],
-			standard: []
+			standard: [
+				'body',
+				'dark',
+				'html'
+			]
 		}
 	},
 	ssr: false,
