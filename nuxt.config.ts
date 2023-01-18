@@ -65,6 +65,7 @@ export default defineNuxtConfig({
 			standard: []
 		}
 	},
+	ssr: false,
 	vite: {
 		build: {
 			chunkSizeWarningLimit: 1024,
@@ -76,7 +77,8 @@ export default defineNuxtConfig({
 						'lodash-es': ['lodash-es']
 					}
 				}
-			}
+			},
+			ssr: false
 		},
 		plugins: [
 			removeConsole()
