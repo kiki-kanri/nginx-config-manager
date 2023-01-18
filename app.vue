@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 
-	if (!isServer) {
+	if (!IS_SERVER) {
 		// Disable ctrl+s and ctrl+u
 		window.addEventListener('keydown', (event) => {
 			if (checkEventKey(event, 's', { ctrl: true }, true)) event.preventDefault();
