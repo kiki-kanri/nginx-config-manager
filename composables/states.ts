@@ -1,6 +1,6 @@
 import { useDark } from '@vueuse/core';
 
-import { MainState } from '@/typings';
+import { MainState } from '@/typings/states';
 
 export const mainState = useState('main', () => {
 	return {
