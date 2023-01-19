@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
     #middle-block-layout {
 		min-height: 100vh;
