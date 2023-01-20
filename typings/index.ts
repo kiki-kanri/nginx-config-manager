@@ -10,19 +10,8 @@ export interface GetStateResponse {
 
 export interface InitConfigFormData {
 	account: string;
-	mongodb: MongodbConfig;
 	nginx: NginxConfig;
 	password: string;
-}
-
-export interface MongodbConfig {
-	auth: boolean;
-	authDatabase: string;
-	database: string;
-	host: string;
-	password: string;
-	port: string;
-	user: string;
 }
 
 export interface NginxConfig {
