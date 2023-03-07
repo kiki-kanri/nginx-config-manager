@@ -37,18 +37,14 @@ export default defineNuxtConfig({
 			threshold: 513
 		}
 	},
-	css: [
-		'element-plus/dist/index.css',
-		'element-plus/theme-chalk/dark/css-vars.css'
-	],
-	imports: {
-		dirs: [
-			'composables',
-			'composables/*/*.{ts,js,mjs,mts}'
+	elementPlus: {
+		themes: [
+			'dark'
 		]
 	},
 	modules: [
 		'@averjs/nuxt-compression',
+		'@element-plus/nuxt',
 		['@sidebase/nuxt-session', sessionConfig],
 		'@vueuse/nuxt',
 		['kikiutils-nuxt', { elementPlus: true, scss: true }],
@@ -69,20 +65,10 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	ssr: false,
 	vite: {
 		build: {
 			chunkSizeWarningLimit: 1024,
-			manifest: false,
-			rollupOptions: {
-				output: {
-					manualChunks: {
-						'axios': ['axios'],
-						'lodash-es': ['lodash-es']
-					}
-				}
-			},
-			ssr: false
+			manifest: false
 		},
 		plugins: [
 			removeConsole()
